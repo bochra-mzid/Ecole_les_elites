@@ -1,0 +1,67 @@
+{
+  "name": "landingpage-react-template",
+  "private": true,
+  "dependencies": {
+    "@date-io/moment": "^2.11.0",
+    "@devexpress/dx-react-core": "^2.7.6",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@progress/kendo-date-math": "^1.5.2",
+    "@progress/kendo-drawing": "^1.11.0",
+    "@progress/kendo-licensing": "^1.2.0",
+    "@progress/kendo-react-animation": "^4.8.0",
+    "@progress/kendo-react-common": "^4.8.0",
+    "@progress/kendo-react-dateinputs": "^4.8.0",
+    "@progress/kendo-react-dialogs": "^4.8.0",
+    "@progress/kendo-react-dropdowns": "^4.8.0",
+    "@progress/kendo-react-form": "^4.8.0",
+    "@progress/kendo-react-inputs": "^4.8.0",
+    "@progress/kendo-react-intl": "^4.8.0",
+    "@progress/kendo-react-scheduler": "^4.8.0",
+    "@progress/kendo-react-treeview": "^4.8.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.21.1",
+    "chartist": "^0.11.4",
+    "classnames": "^2.3.1",
+    "cldr-core": "^39.0.0",
+    "cldr-dates-full": "^39.0.0",
+    "cldr-numbers-full": "^39.0.0",
+    "cors": "^2.8.5",
+    "emailjs-com": "^2.6.4",
+    "file-saver": "^2.0.5",
+    "generate-password": "^1.6.1",
+    "perfect-scrollbar": "^1.5.2",
+    "react": "^17.0.1",
+    "react-chartist": "^0.14.4",
+    "react-countup": "^5.2.0",
+    "react-dom": "^17.0.1",
+    "react-reveal": "^1.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.2",
+    "simple-react-lightbox": "^3.6.6",
+    "smooth-scroll": "^16.1.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
