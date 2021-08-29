@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const Eleve = require("../models/Eleve")
+const Classe = require("../models/Classe")
 
 
 router.get("/count",async(req, res) => {
@@ -43,17 +44,21 @@ router.get('/:niveau', (req, res,) => {
 });
 
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
+    try{
     const eleve = new Eleve({
         ...req.body
     });
-    eleve.save()
-        .then(() => res.status(201).json({ message: 'un nouveau eleve est bien enregistré !' }))
-        .catch(error => res.status(400).json({ error }));
+    const classe= await Classe.findOne({_id: req.body.classe})
+    classe.eleves.push(eleve)
+    await classe.save()
+    await eleve.save()
+    res.status(201).json({ message: 'un nouveau eleve est bien enregistré !' })}
+    catch(err){ res.status(400).json({ err }) }
 });
 
 
-router.put('/:id', (req, res) => {
+router.put('/:id', async(req, res) => {
     Eleve.findByIdAndUpdate({ _id: req.params.id }, { ...req.body, _id: req.params.id })
         .then(() => res.status(200).json({ message: 'Eleve modifié !' }))
         .catch(error => res.status(400).json({ error }));

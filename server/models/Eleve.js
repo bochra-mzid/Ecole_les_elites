@@ -4,21 +4,21 @@ const Schema = mongoose.Schema
 const EleveSchema = mongoose.Schema({
     nom:{type:String, require:true},
     prenom:{type:String, require:true},
-    age:{type:Number, required:true},
-    email:{type:String, required:true},
-    mdp:{type:String, required:true},
+    age:{type:Number},
+    email:{type:String},
+    mdp:{type:String},
     sexe:{type:String},
     numero:{type:Number},
     adresse:{type:String},
     nomPere:{type:String},
     nomMere:{type:String},
-    numPere:{type:Number, required:true},
-    numMere:{type:Number, required:true},
-    niveau:{type:Number, required:true},
-    classe:[{
+    numPere:{type:Number},
+    numMere:{type:Number},
+    niveau:{type:Number},
+    classe:{
         type:Schema.Types.ObjectId,
         ref:"Classe"
-    }],
+    },
     seances:[{
         type:Schema.Types.ObjectId,
         ref:"Seance"

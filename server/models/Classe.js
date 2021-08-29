@@ -22,6 +22,10 @@ const ClasseSchema = mongoose.Schema({
         type:Schema.Types.ObjectId,
         ref:"Matiere"
     }],
+    eleves:[{
+        type:Schema.Types.ObjectId,
+        ref:"Eleve"
+    }]
 
 })
 

@@ -2,7 +2,7 @@ import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
 import DashboardPage from "./views/Dashboard/Dashboard2";
 import ProfileEnseignant from "./views/ProfileEnseignant/ProfileEnseignant.js";
-import TableList from "./views/TableList/TableList.js";
+import Eleves from "./views/Eleves/Eleves";
 import Emploi from "./views/Emploi/Emploi"
 import Presence from "./views/Presence/Presence"
 
@@ -28,7 +28,7 @@ const dashboardRoutes = [
     name: " التصرف في التلاميذ",
     rtlName: "قائمة الجدول",
     icon: "content_paste",
-    component: TableList,
+    component: Eleves,
     layout: "/enseignant",
   },
   {

@@ -24,7 +24,7 @@ catch(err){
 
 
 router.get('/', (req, res) => {
-    Classe.find().populate("matieres")
+    Classe.find().populate("matieres eleves")
         .then((classe) => {
             res.status(200).json(classe)
         }).catch(error => {
@@ -48,6 +48,16 @@ router.get('/:id/enseignants', (req, res) => {
     Classe.findById({_id: req.params.id}).populate('enseignants')
         .then((ens) => {
             res.status(200).json(ens.enseignants)
+        }).catch(error => {
+            res.status(400).json({ error })
+            console.log('erreur')
+        })
+})
+
+router.get('/:id/eleves', (req, res) => {
+    Classe.findById({_id: req.params.id}).populate('eleves')
+        .then((c) => {
+            res.status(200).json(c.eleves)
         }).catch(error => {
             res.status(400).json({ error })
             console.log('erreur')
